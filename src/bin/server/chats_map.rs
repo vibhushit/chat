@@ -12,7 +12,8 @@ impl ChatTracker {
     }
 
     pub fn find(&self, name: &String) -> Option<Arc<Chats>> {
-        self.0.lock().unwrap().get(name).clone()
+        (self.0.lock().unwrap().get(name)).cloned()
+
     } 
 
     pub fn find_or_new(&self, name: Arc<String>) -> Arc<Chats> {

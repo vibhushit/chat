@@ -5,7 +5,7 @@ use async_std::sync::{Arc,Mutex};
 use chat::utils::{self,ChatResult};
 use chat::{Client, Server};
 
-use super::chats_map::ChatTracker;
+use crate::chats_map::ChatTracker;
 
 
 // use crate::chats_map::ChatTracker;
